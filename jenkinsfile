@@ -9,6 +9,10 @@ node('jing-centos6') {
 		}
 	stage('测试') {
 		//test
+		node(){
+			checkout scm
+			bat 'robot -P . tc'
+		}
 		}
 	stage('交付') {
 		//
