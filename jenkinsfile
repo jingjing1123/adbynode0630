@@ -1,4 +1,4 @@
-node('ubentu') {
+node('jing-centos6') {
 	stage('构建') {
 		//把代码从git上clone下来
 		checkout scm
