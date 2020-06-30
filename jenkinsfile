@@ -1,0 +1,16 @@
+node('jing-centos6') {
+	stage('构建') {
+		//把代码从git上clone下来
+		checkout scm
+		}
+	stage('部署') {
+		//执行运行脚本
+		sh 'cd restapi-teach && sh run.sh'
+		}
+	stage('测试') {
+		//test
+		}
+	stage('交付') {
+		//
+		}
+}
